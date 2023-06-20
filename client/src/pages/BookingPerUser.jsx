@@ -70,7 +70,7 @@ getShowsperUser()
 
 
 <div style={{justifyContent:"center",alignItems:'center',display:'flex',gap:'50px'}}>
-{ bookshowperUser && bookshowperUser.length > 0 ? bookshowperUser.map((item,key)=>(
+
 <TableContainer sx={{ width:"50%",backgroundColor:"#fff"}}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
@@ -86,7 +86,7 @@ getShowsperUser()
             </TableRow>
           </TableHead>
           <TableBody>
-      
+      { bookshowperUser && bookshowperUser.length > 0 ? bookshowperUser.map((item,key)=>(
                   <TableRow hover role="checkbox" tabIndex={-1} key={item._id}>
                   
                         <TableCell >
@@ -100,14 +100,14 @@ getShowsperUser()
                         </TableCell>
                   
                   </TableRow>
-                  
+                       ))
+      : <h2 style={{textAlign:"center",color:"black"}}>No Tickets</h2> }
               
           </TableBody>
         </Table>
       
       </TableContainer>
-      ))
-      : <h2 style={{textAlign:"center"}}>No Tickets</h2> }
+ 
     
     
 </div>
